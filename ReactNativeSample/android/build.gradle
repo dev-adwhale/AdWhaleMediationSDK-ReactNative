@@ -1,0 +1,65 @@
+buildscript {
+    ext {
+        buildToolsVersion = "35.0.0"
+        minSdkVersion = 24
+        compileSdkVersion = 35
+        targetSdkVersion = 34
+        ndkVersion = "26.1.10909125"
+        kotlinVersion = "1.9.24"
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle")
+        classpath("com.facebook.react:react-native-gradle-plugin")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        flatDir {
+            dirs 'libs'
+        }
+        // ADwhale Mediation SDK Repository Public Access Info
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/dev-adwhale/AdWhaleAndroid/SDK")
+            credentials {
+                username = 'ADwhale Mediation SDK 가이드 내 키값 참조'
+                password = 'ADwhale Mediation SDK 가이드 내 키값 참조'
+            }
+        }
+
+        // Cauly SDK Repository Public Access Info
+        maven {
+            url "s3://repo.cauly.net/releases"
+            credentials(AwsCredentials) {
+                accessKey "ADwhale Mediation SDK 가이드 내 키값 참조"
+                secretKey "ADwhale Mediation SDK 가이드 내 키값 참조"
+            }
+        }
+
+        // Admize SDK Repository Public Access Info
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/cauly/admize-sdk-android/SDK")
+            credentials {
+                username = 'ADwhale Mediation SDK 가이드 내 키값 참조'
+                password = 'ADwhale Mediation SDK 가이드 내 키값 참조'
+            }
+        }
+
+        // AdFit SDK Repository Public Access Info
+        maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
+
+        // Bidmad SDK Repository Public Access Info
+        maven { url "https://bidmad-sdk.s3.amazonaws.com/" }
+    }
+}
+
+apply plugin: "com.facebook.react.rootproject"
