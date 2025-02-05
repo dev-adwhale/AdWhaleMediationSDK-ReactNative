@@ -38,27 +38,9 @@ class RNAdWhaleMediationAdViewKt(private val rnAdWhaleMediationAdSettingModuleKt
         Log.e(REACT_CLASS_NAME, "rootView created.")
         Log.i(REACT_CLASS_NAME, "currentActivity: ${themedReactContext.currentActivity}")
 
-//        AdWhaleMediationAds.init(themedReactContext.currentActivity){
-//            statusCode, Message ->
-////            run {
-//                Handler(Looper.getMainLooper()).post(Runnable {
-//                    adWhaleMediationAdView.loadAd()
-//                })
-////            }
-//        }
-//
-//        AdWhaleMediationAds.init(themedReactContext.currentActivity, AdWhaleMediationOnInitCompleteListener {
-//            statusCode: Int, message: String? -> {
-//                Handler(Looper.getMainLooper()).post(Runnable {
-//                    adWhaleMediationAdView.loadAd()
-//                })
-//            }
-//        })
 
         adWhaleMediationAdView = AdWhaleMediationAdView(themedReactContext.currentActivity)
         adWhaleMediationAdView.adWhaleMediationAdViewListener = this
-//        adWhaleMediationAdView.placementUid = "AU1731554011712"
-//        adWhaleMediationAdView.adwhaleAdSize = ADWHALE_AD_SIZE.BANNER320x50
 
         val params : RelativeLayout.LayoutParams = RelativeLayout.LayoutParams(
             RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT)

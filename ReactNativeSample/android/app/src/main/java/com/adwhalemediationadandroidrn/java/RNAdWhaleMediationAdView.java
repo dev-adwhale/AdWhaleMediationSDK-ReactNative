@@ -54,26 +54,9 @@ public class RNAdWhaleMediationAdView extends ViewGroupManager<RNWrapperView> im
         Log.e(REACT_CLASS_NAME, "rootView created.");
         Log.i(REACT_CLASS_NAME, "getCurrentActivity(): " + themedReactContext.getCurrentActivity());
 
-//        AdWhaleMediationAds.init(themedReactContext.getCurrentActivity(), new AdWhaleMediationOnInitCompleteListener() {
-//            @Override
-//            public void onInitComplete(int statusCode, String message) {
-//                Log.i(REACT_CLASS_NAME, ".onInitComplete(" + statusCode + ", " + message + ")");
-//                if(adWhaleMediationAdView != null) {
-//                    new Handler(Looper.getMainLooper()).post(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            // 배너 뷰 로드
-//                            adWhaleMediationAdView.loadAd();
-//                        }
-//                    });
-//                }
-//            }
-//        });
 
         adWhaleMediationAdView = new AdWhaleMediationAdView(themedReactContext.getCurrentActivity());
         adWhaleMediationAdView.setAdWhaleMediationAdViewListener(this);
-//        adWhaleMediationAdView.setPlacementUid("AU1731554011712");
-//        adWhaleMediationAdView.setAdwhaleAdSize(ADWHALE_AD_SIZE.BANNER320x50);
 
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);

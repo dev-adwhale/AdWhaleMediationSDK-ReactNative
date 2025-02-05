@@ -41,38 +41,6 @@ public class RNAdWhaleMediationInterstitialAd extends ReactContextBaseJavaModule
         Log.e(REACT_CLASS_NAME, "initialize() placementUid: " + placementUid);
         adWhaleMediationInterstitialAd = new AdWhaleMediationInterstitialAd(placementUid);
         adWhaleMediationInterstitialAd.setAdWhaleMediationInterstitialAdListener(this);
-
-//        adWhaleMediationInterstitialAd.setAdWhaleMediationInterstitialAdListener(new AdWhaleMediationInterstitialAdListener() {
-//            @Override
-//            public void onAdLoaded() {
-//                Log.i(REACT_CLASS_NAME, "onAdLoaded()");
-//                promise.resolve("onAdLoaded");
-//            }
-//
-//            @Override
-//            public void onAdLoadFailed(int statusCode, String message) {
-//                Log.i(REACT_CLASS_NAME, "onAdLoadFailed(" + statusCode + ", " + message + ")");
-//                promise.reject("onAdLoadFailed", message);
-//            }
-//
-//            @Override
-//            public void onAdShowed() {
-//                Log.i(REACT_CLASS_NAME, "onAdShowed()");
-//                promise.resolve("onAdShowed");
-//            }
-//
-//            @Override
-//            public void onAdShowFailed(int statusCode, String message) {
-//                Log.i(REACT_CLASS_NAME, "onAdShowFailed(" + statusCode + ", " + message + ")");
-//                promise.reject("onAdShowFailed", message);
-//            }
-//
-//            @Override
-//            public void onAdClosed() {
-//                Log.i(REACT_CLASS_NAME, "onAdClosed()");
-//                promise.resolve("onAdClosed");
-//            }
-//        });
     }
 
     @ReactMethod

@@ -48,16 +48,6 @@ public class RNAdWhaleMediationAdSettingModule extends ReactContextBaseJavaModul
             public void onInitComplete(int statusCode, String message) {
                 Log.i(REACT_CLASS_NAME, ".onInitComplete(" + statusCode + ", " + message + ")");
                 promise.resolve(statusCode);
-
-//                if(adWhaleMediationAdView != null) {
-//                    new Handler(Looper.getMainLooper()).post(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            // 배너 뷰 로드
-//                            adWhaleMediationAdView.loadAd();
-//                        }
-//                    });
-//                }
             }
         });
     }
