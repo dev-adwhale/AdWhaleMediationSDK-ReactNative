@@ -138,6 +138,12 @@ public class RNAdWhaleMediationInterstitialAd extends ReactContextBaseJavaModule
         Log.i(REACT_CLASS_NAME, "onAdClosed()");
         sendEvent("onInterstitialAdClosed", null);
     }
+    
+    @Override
+    public void onAdClicked() {
+        Log.i(REACT_CLASS_NAME, "onAdClicked()");
+        sendEvent("onInterstitialAdClicked", null);
+    }
 
     @Nullable
     @Override

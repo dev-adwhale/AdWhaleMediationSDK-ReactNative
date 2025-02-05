@@ -78,6 +78,11 @@ class RNAdWhaleMediationInterstitialAdKt(private val context: ReactApplicationCo
         sendEvent("onInterstitialAdClosed", null)
     }
 
+    override fun onAdClicked() {
+        Log.i(REACT_CLASS_NAME, "onAdClicked()")
+        sendEvent("onInterstitialAdClicked", null)
+    }
+
     fun sendEvent(eventName: String, params: WritableMap?) {
         reactApplicationContext
             .getJSModule(RCTDeviceEventEmitter::class.java)

@@ -30,6 +30,7 @@ class InterstitialAd extends Component {
         eventEmitter.addListener('onInterstitialAdClosed', this._onInterstitialAdClosed);
         eventEmitter.addListener('onInterstitialAdLoadFailed', this._onInterstitialAdLoadFailed);
         eventEmitter.addListener('onInterstitialAdShowFailed', this._onInterstitialAdShowFailed);
+        eventEmitter.addListener('onInterstitialAdClicked', this._onInterstitialAdClicked);
     }
 
 
@@ -65,6 +66,10 @@ class InterstitialAd extends Component {
     _onInterstitialAdClosed = () => {
         console.log("[InterstitialAdKt.js]js did registered _onInterstitialAdClosed successfully!!!");
         this.setState({ isInterstitialAdLoaded: false });
+    }
+
+    _onInterstitialAdClicked = () => {
+        console.log("[InterstitialAd.js]js did registered _onInterstitialAdClicked successfully!!!");
     }
 
     render() {

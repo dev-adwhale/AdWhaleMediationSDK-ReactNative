@@ -35,7 +35,7 @@
           android:value="발급받은 PUBLISHER_UID 값" />
       <meta-data
           android:name="com.google.android.gms.ads.APPLICATION_ID"
-          android:value="Google AdMob 에서 발급한 키값" />
+          android:value="Admob에서 발급받은 APP ID 값" />
       <!-- ADwhale Mediation SDK 키들 -->
 
     </application>
