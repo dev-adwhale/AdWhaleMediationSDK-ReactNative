@@ -1,7 +1,6 @@
-package com.adwhalemediationadandroidrn.kotlin
+package com.adwhalemediationadandroidexpo.kotlin
 
 import android.util.Log
-import com.adwhalemediationadandroidrn.java.RNAdWhaleMediationAdSettingModule
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule

@@ -1,9 +1,7 @@
-package com.adwhalemediationadandroidrn.java;
+package com.adwhalemediationadandroidexpo.java;
 
 
 import android.app.Activity;
-import android.os.Handler;
-import android.os.Looper;
 import android.util.Log;
 
 import androidx.annotation.NonNull;

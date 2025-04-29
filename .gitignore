@@ -563,4 +563,11 @@ fabric.properties
 
 !/gradle/wrapper/gradle-wrapper.jar
 
+### Expo ###
+
+.expo/
+.expo-shared/
+web-build/
+dist/
+
 # End of https://www.toptal.com/developers/gitignore/api/reactnative,android,androidstudio,java,kotlin,xcode,objective-c,swift,cocoapods
