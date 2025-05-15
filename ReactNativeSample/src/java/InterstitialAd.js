@@ -23,7 +23,6 @@ class InterstitialAd extends Component {
   }
 
   _interstitialAdInit = () => {
-    RNAdWhaleMediationInterstitialAd.initialize("발급받은 placement uid 값");
     const eventEmitter = new NativeEventEmitter(RNAdWhaleMediationInterstitialAd);
     eventEmitter.addListener('onInterstitialAdLoaded', this._onInterstitialAdLoaded);
     eventEmitter.addListener('onInterstitialAdShowed', this._onInterstitialAdShowed);
@@ -34,7 +33,7 @@ class InterstitialAd extends Component {
   }
 
   onPressInterstitialRequestButton = () => {
-    RNAdWhaleMediationInterstitialAd.loadAd();
+    RNAdWhaleMediationInterstitialAd.loadAd("발급받은 placement uid 값");
   }
 
   onPressInterstitialShowButton = () => {

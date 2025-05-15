@@ -38,19 +38,10 @@ public class RNAdWhaleMediationRewardAd extends ReactContextBaseJavaModule imple
     }
 
     @ReactMethod
-    public void initialize(String placementUid) {
-        Log.e(REACT_CLASS_NAME, "initialize() placementUid: " + placementUid);
+    public void loadAd(String placementUid) {
+        Log.e(REACT_CLASS_NAME, "loadAd()");
         adWhaleMediationRewardAd = new AdWhaleMediationRewardAd(placementUid);
         adWhaleMediationRewardAd.setAdWhaleMediationFullScreenContentCallback(this);
-    }
-
-    @ReactMethod
-    public void loadAd() {
-        Log.e(REACT_CLASS_NAME, "loadAd()");
-        if (adWhaleMediationRewardAd == null) {
-            Log.e(REACT_CLASS_NAME, "adWhaleMediationRewardAd is null");
-            return;
-        }
 
         UiThreadUtil.runOnUiThread(() -> {
             adWhaleMediationRewardAd.loadAd(this);

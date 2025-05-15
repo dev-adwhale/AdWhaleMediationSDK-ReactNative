@@ -37,15 +37,10 @@ public class RNAdWhaleMediationInterstitialAd extends ReactContextBaseJavaModule
     }
 
     @ReactMethod
-    public void initialize(String placementUid, final Promise promise) {
-        Log.e(REACT_CLASS_NAME, "initialize() placementUid: " + placementUid);
+    public void loadAd(String placementUid) {
+        Log.e(REACT_CLASS_NAME, ".loadAd()");
         adWhaleMediationInterstitialAd = new AdWhaleMediationInterstitialAd(placementUid);
         adWhaleMediationInterstitialAd.setAdWhaleMediationInterstitialAdListener(this);
-    }
-
-    @ReactMethod
-    public void loadAd() {
-        Log.e(REACT_CLASS_NAME, ".loadAd()");
 
         if (adWhaleMediationInterstitialAd == null) {
             Log.e(REACT_CLASS_NAME, "adWhaleMediationInterstitialAd is null");

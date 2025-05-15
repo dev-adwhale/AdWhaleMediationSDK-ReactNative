@@ -27,15 +27,10 @@ class RNAdWhaleMediationRewardAdKt(private val context: ReactApplicationContext)
     }
 
     @ReactMethod
-    fun initialize(placementUid: String) {
-        Log.e(REACT_CLASS_NAME, "initialize() placementUid: $placementUid")
+    fun loadAd(placementUid: String) {
+        Log.e(REACT_CLASS_NAME, "loadAd()")
         adWhaleMediationRewardAd = AdWhaleMediationRewardAd(placementUid)
         adWhaleMediationRewardAd.setAdWhaleMediationFullScreenContentCallback(this)
-    }
-
-    @ReactMethod
-    fun loadAd() {
-        Log.e(REACT_CLASS_NAME, "loadAd()")
 
         UiThreadUtil.runOnUiThread {
             adWhaleMediationRewardAd.loadAd(this)

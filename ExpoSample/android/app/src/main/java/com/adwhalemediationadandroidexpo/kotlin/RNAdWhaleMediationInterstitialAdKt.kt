@@ -25,15 +25,11 @@ class RNAdWhaleMediationInterstitialAdKt(private val context: ReactApplicationCo
     }
 
     @ReactMethod
-    fun initialize(placementUid: String, promise: Promise) {
-        Log.e(REACT_CLASS_NAME, "initialize() placementUid: $placementUid")
+    fun loadAd(placementUid: String) {
+        Log.e(REACT_CLASS_NAME, "loadAd()")
         adWhaleMediationInterstitialAd = AdWhaleMediationInterstitialAd(placementUid)
         adWhaleMediationInterstitialAd.setAdWhaleMediationInterstitialAdListener(this)
-    }
 
-    @ReactMethod
-    fun loadAd() {
-        Log.e(REACT_CLASS_NAME, "loadAd()")
         UiThreadUtil.runOnUiThread{
             adWhaleMediationInterstitialAd.loadAd()
         }

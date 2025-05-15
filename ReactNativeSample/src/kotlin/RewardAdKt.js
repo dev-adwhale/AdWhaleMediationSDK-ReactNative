@@ -23,7 +23,6 @@ class RewardAd extends Component {
     }
 
     _rewardAdInit = () => {
-        RNAdWhaleMediationRewardAdKt.initialize("발급받은 placement uid 값");
         const eventEmitter = new NativeEventEmitter(RNAdWhaleMediationRewardAdKt);
         eventEmitter.addListener('onRewardAdLoaded', this._onRewardAdLoaded);
         eventEmitter.addListener('onRewardAdShowed', this._onRewardAdShowed);
@@ -35,7 +34,7 @@ class RewardAd extends Component {
     }
 
     onPressRewardRequestButton = () => {
-        RNAdWhaleMediationRewardAdKt.loadAd();
+        RNAdWhaleMediationRewardAdKt.loadAd("발급받은 placement uid 값");
     }
     
     onPressRewardShowButton = () => {
