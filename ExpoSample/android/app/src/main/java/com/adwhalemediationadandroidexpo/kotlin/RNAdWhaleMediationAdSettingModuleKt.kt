@@ -22,7 +22,7 @@ class RNAdWhaleMediationAdSettingModuleKt(context : ReactApplicationContext?) : 
     fun initialize(promise: Promise) : Unit {
         Log.i(REACT_CLASS_NAME, ".initialize()")
 
-        AdWhaleLog.setLogLevel(AdWhaleLog.LogLevel.None)
+        AdWhaleLog.setLogLevel(AdWhaleLog.LogLevel.Verbose)
 
         AdWhaleMediationAds.init(currentActivity) {
             statusCode, message -> Log.i(REACT_CLASS_NAME, ".onInitComplete($statusCode, ${message});")

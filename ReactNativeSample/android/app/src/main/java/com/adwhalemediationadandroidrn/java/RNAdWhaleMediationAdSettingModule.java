@@ -44,7 +44,7 @@ public class RNAdWhaleMediationAdSettingModule extends ReactContextBaseJavaModul
             return;
         }
 
-        AdWhaleLog.setLogLevel(AdWhaleLog.LogLevel.None);
+        AdWhaleLog.setLogLevel(AdWhaleLog.LogLevel.Verbose);
 
         AdWhaleMediationAds.init(currentActivity, new AdWhaleMediationOnInitCompleteListener() {
             @Override
