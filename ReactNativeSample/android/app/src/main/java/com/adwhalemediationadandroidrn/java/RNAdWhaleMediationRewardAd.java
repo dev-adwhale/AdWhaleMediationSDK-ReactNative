@@ -38,7 +38,7 @@ public class RNAdWhaleMediationRewardAd extends ReactContextBaseJavaModule imple
     }
 
     @ReactMethod
-    public void loadAd() {
+    public void loadAd(String placementUid) {
         Log.e(REACT_CLASS_NAME, "loadAd()");
         adWhaleMediationRewardAd = new AdWhaleMediationRewardAd(placementUid);
         adWhaleMediationRewardAd.setAdWhaleMediationFullScreenContentCallback(this);

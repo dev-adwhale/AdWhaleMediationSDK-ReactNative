@@ -25,7 +25,7 @@ class RNAdWhaleMediationInterstitialAdKt(private val context: ReactApplicationCo
     }
 
     @ReactMethod
-    fun loadAd() {
+    fun loadAd(placementUid: String) {
         Log.e(REACT_CLASS_NAME, "loadAd()")
         adWhaleMediationInterstitialAd = AdWhaleMediationInterstitialAd(placementUid)
         adWhaleMediationInterstitialAd.setAdWhaleMediationInterstitialAdListener(this)
